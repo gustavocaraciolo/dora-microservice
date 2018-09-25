@@ -8,7 +8,9 @@ application {
     prodDatabaseType mysql,
     cacheProvider hazelcast,
     buildTool maven,
-    useSass true
+    useSass true,
+    languages [pt-br,en],
+    nativeLanguage pt-br
   }
   entities *
 }
@@ -22,7 +24,9 @@ application {
     prodDatabaseType mysql,
     buildTool maven,
     serverPort 8081,
-    skipUserManagement true
+    skipUserManagement true,
+    languages [pt-br,en],
+    nativeLanguage pt-br
   }
   entities Invoice, Shipment
 }
@@ -36,7 +40,9 @@ application {
     prodDatabaseType mysql,
     buildTool maven,
     serverPort 8082,
-    skipUserManagement true
+    skipUserManagement true,
+    languages [pt-br,en],
+    nativeLanguage pt-br
   }
   entities Notification
 }
