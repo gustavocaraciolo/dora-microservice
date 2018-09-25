@@ -1,0 +1,41 @@
+{
+  "generator-jhipster": {
+    "applicationType": "microservice",
+    "clientPackageManager": "npm",
+    "databaseType": "sql",
+    "devDatabaseType": "h2Disk",
+    "enableHibernateCache": true,
+    "enableSwaggerCodegen": false,
+    "enableTranslation": true,
+    "jhiPrefix": "jhi",
+    "languages": [
+      "pt-br",
+      "en"
+    ],
+    "messageBroker": false,
+    "nativeLanguage": "pt-br",
+    "packageName": "com.jhipster.demo.invoice",
+    "packageFolder": "com/jhipster/demo/invoice",
+    "prodDatabaseType": "mysql",
+    "searchEngine": false,
+    "serviceDiscoveryType": "eureka",
+    "skipClient": true,
+    "skipServer": false,
+    "testFrameworks": [],
+    "useSass": false,
+    "websocket": false,
+    "baseName": "invoice",
+    "authenticationType": "jwt",
+    "buildTool": "maven",
+    "serverPort": "8081",
+    "skipUserManagement": true,
+    "jhipsterVersion": "5.3.4",
+    "jwtSecretKey": "YzA0ZTI3NzY3Yzk3YWE4YTFkNmJiNTk0MTU0OTdhMzc2NDU0ODA0MjIzYWI1OGEwN2FlYTdhOWVmMGM3OWUzZDgyMDY2YWFmOGE1ZjFlZGFiNzZiODJmZWNlODAwY2RhMTQxNw==",
+    "cacheProvider": "hazelcast",
+    "clientFramework": "angularX"
+  },
+  "entities": [
+    "Invoice",
+    "Shipment"
+  ]
+}
