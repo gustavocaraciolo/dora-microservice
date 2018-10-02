@@ -15,16 +15,16 @@ node {
     }
 
     stage('install tools') {
-        sh "./mvnw com.github.eirslett:frontend-maven-plugin:install-node-and-npm -DnodeVersion=v8.11.4 -DnpmVersion=6.4.1"
+        sh "store/./mvnw com.github.eirslett:frontend-maven-plugin:install-node-and-npm -DnodeVersion=v8.11.4 -DnpmVersion=6.4.1"
     }
 
     stage('npm install') {
-        sh "./mvnw com.github.eirslett:frontend-maven-plugin:npm"
+        sh "store/./mvnw com.github.eirslett:frontend-maven-plugin:npm"
     }
 
     stage('backend tests') {
         try {
-            sh "./mvnw test"
+            sh "store/./mvnw test"
         } catch(err) {
             throw err
         } finally {
