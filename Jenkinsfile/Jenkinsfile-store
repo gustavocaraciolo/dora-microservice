@@ -10,8 +10,8 @@ node {
     }
 
     stage('clean') {
-        sh "chmod +x mvnw"
-        sh "./mvnw clean"
+        sh "chmod +x store/mvnw"
+        sh "store/./mvnw clean"
     }
 
     stage('install tools') {
