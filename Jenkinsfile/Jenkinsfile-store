@@ -11,8 +11,9 @@ node {
         }
 
         stage('clean') {
+            sh "cd store"
             sh "chmod +x mvnw"
-            sh "store/./mvnw clean"
+            sh "./mvnw clean"
         }
 
         stage('install tools') {
