@@ -28,7 +28,7 @@ node {
         } catch(err) {
             throw err
         } finally {
-            junit 'cd store && **/target/surefire-reports/TEST-*.xml'
+            //junit 'cd store && **/target/surefire-reports/TEST-*.xml'
         }
     }
 
