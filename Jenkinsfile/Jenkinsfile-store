@@ -38,12 +38,12 @@ node {
         } catch(err) {
             throw err
         } finally {
-            junit 'cd store && **/target/test-results/jest/TESTS-*.xml'
+            junit '**/target/test-results/jest/TESTS-*.xml'
         }
     }
 
     stage('packaging') {
         sh "cd store && ./mvnw verify -Pprod -DskipTests"
-        archiveArtifacts artifacts: 'cd store && **/target/*.war', fingerprint: true
+        archiveArtifacts artifacts: '**/target/*.war', fingerprint: true
     }
 }
