@@ -11,20 +11,20 @@ node {
 
     stage('clean') {
         sh "chmod +x store/mvnw"
-        sh "store/./mvnw clean"
+        sh "cd store && ./mvnw clean"
     }
 
     stage('install tools') {
-        sh "store/./mvnw com.github.eirslett:frontend-maven-plugin:install-node-and-npm -DnodeVersion=v8.11.4 -DnpmVersion=6.4.1"
+        sh "./mvnw com.github.eirslett:frontend-maven-plugin:install-node-and-npm -DnodeVersion=v8.11.4 -DnpmVersion=6.4.1"
     }
 
     stage('npm install') {
-        sh "store/./mvnw com.github.eirslett:frontend-maven-plugin:npm"
+        sh "./mvnw com.github.eirslett:frontend-maven-plugin:npm"
     }
 
     stage('backend tests') {
         try {
-            sh "store/./mvnw test"
+            sh "./mvnw test"
         } catch(err) {
             throw err
         } finally {
