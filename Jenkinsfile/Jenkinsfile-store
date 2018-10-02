@@ -12,7 +12,6 @@ node {
 
         stage('clean') {
             sh "cd store"
-            sh "chmod +x mvnw"
             sh "./mvnw clean"
         }
 
